@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>LGS_tufCookies</title>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #0B0B0B;
+            color: white;
+        }
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            background-color: black;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .container h2 {
+            text-align: center;
+            color: #39FF14;
+        }
+
+        .container p {
+            color: white;
+            text-align: center;
+        }
+
+        header {
+            background-color: #000;
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+            border-bottom: 3px solid #39FF14;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 38px;
+            color: #39FF14;
+            overflow: hidden;
+            letter-spacing: 4px;
+        }
+
+        header h1 span {
+            opacity: 0;
+            display: inline-block;
+            transform: translateY(-20px);
+            animation: fadeInUp 0.6s forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        header p {
+            margin-top: 10px;
+            font-size: 18px;
+            color: #d1d5db;
+            opacity: 0;
+            transform: translateY(-10px);
+            animation: fadeInP 1s forwards;
+            animation-delay: 1.2s;
+        }
+
+        @keyframes fadeInP {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            background-color: #111;
+            z-index: 100;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 15px 25px;
+            display: block;
+            font-size: 16px;
+            position: relative;
+            transition: transform 0.2s ease;
+        }
+
+        nav a::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: 6px;
+            width: 0;
+            height: 2px;
+            background: #39FF14;
+            transition: 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        nav a:hover::after {
+            width: 60%;
+        }
+
+        nav a:hover {
+            transform: scale(1.05);
+        }
+
+        .section {
+            background-color: #000;
+            color: #fff;
+            padding: 60px 20px;
+            margin: 30px 0;
+            border-left: 5px solid #39FF14;
+            opacity: 0;
+            transform: scale(0.98);
+            transition: transform 0.6s ease, opacity 0.6s ease;
+        }
+
+        .section-left {
+            transform: translateX(-50px) scale(0.98);
+        }
+
+        .section-right {
+            transform: translateX(50px) scale(0.98);
+        }
+
+        .section.visible {
+            opacity: 1;
+            transform: translateX(0) scale(1);
+        }
+
+        .section:hover {
+            box-shadow: 0 20px 40px rgba(57, 255, 20, 0.15);
+            transform: translateY(-5px) scale(1.01);
+        }
+
+        .section h2 {
+            text-align: center;
+            font-size: 28px;
+            margin-top: 0;
+            color: #39FF14;
+        }
+
+        .section p {
+            text-align: center;
+            font-size: 16px;
+            max-width: 700px;
+            margin: 10px auto;
+        }
+
+        .contact {
+            background-color: #111;
+            color: #fff;
+            padding: 40px 20px;
+            margin-top: 60px;
+            border-top: 3px solid #39FF14;
+        }
+
+        .contact-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact h2 {
+            margin-top: 0;
+            font-size: 26px;
+            color: #39FF14;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1 id="header-text">LGS_tufCookies</h1>
+    <p>An Lgs Robotics Team </p>
+</header>
+
+<nav>
+    <a href="#about">About</a>
+    <a href="#voice">Innovation</a>
+    <a href="#mental">Robot Performance</a>
+    <a href="#environment">Robot Design</a>
+    <a href="#contact">Core Values</a>
+</nav>
+
+
+</div>
+<div class="container" id="about">
+      <h2>About Us</h2>
+      <p>
+          We are LGS_tufCookies, a Langley Grammar School robotics team who have made their way into the prestigious UK First Lego League National Finals!    
+      </p>
+    </div>
+<div class="section section-left" id="environment">
+    <h2>Innovation Project</h2>
+    <p>
+       Our project has come a long way, improvements, extensions and setbacks, our team has faced it all.
+       Our first phase started when we landed on the idea of creating a chatbot. 
+    </p>
+</div>
+
+<div class="section section-left" id="voice">
+    <h2>Robot Performance</h2>
+    <p>
+        --------
+    </p>
+</div>
+
+<div class="section section-right" id="mental">
+    <h2>Robot Design</h2>
+    <p>
+        ------------
+    </p>
+</div>
+
+<div class="section section-left" id="environment">
+    <h2>Core Values</h2>
+    <p>
+       --------
+    </p>
+</div>
+
+<div class="contact" id="contact">
+    <div class="contact-content">
+        <h2>Communication</h2>
+        <p>
+            Email: LGS_tufCookies@gmail.com
+        </p>
+        <p> Phone Number: +44 7404 759423<p>
+    </div>
+</div>
+
+<script>
+    const header = document.getElementById('header-text');
+    const words = header.innerText.split(' ');
+    header.innerText = '';
+    words.forEach((word, i) => {
+        const span = document.createElement('span');
+        span.innerText = word + ' ';
+        span.style.animationDelay = `${i * 0.15}s`;
+        header.appendChild(span);
+    });
+
+    const sections = document.querySelectorAll('.section');
+
+    function checkSections() {
+        const triggerBottom = window.innerHeight * 0.8;
+        sections.forEach((section, index) => {
+            const sectionTop = section.getBoundingClientRect().top;
+            if (sectionTop < triggerBottom && sectionTop + section.offsetHeight > 0) {
+                section.style.transitionDelay = `${index * 0.15}s`;
+                section.classList.add('visible');
+            } else {
+                section.classList.remove('visible');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', checkSections);
+    window.addEventListener('load', checkSections);
+</script>
+
+</body>
+</html>
