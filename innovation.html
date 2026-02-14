@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Innovation Project</title>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #0B0B0B;
+            color: white;
+        }
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            background-color: black;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgb(57,255,20);
+        }
+        .container h2 {
+            text-align: center;
+            color: #39FF14;
+        }
+
+        .container p {
+            color: white;
+            text-align: center;
+        }
+        .container img {
+            align-items: center;
+        }
+        .containerlimage {
+            max-width: 500px;
+            background-color: black;
+            margin-right: 15px;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgb(57,255,20);
+        }
+        table {
+    border-collapse: separate;
+    border-spacing: 40px 40px;
+}
+
+
+        .containerrtext {
+            max-width: 800px;
+            background-color: black;
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgb(57,255,20);
+        }
+        .conatinerrimage {
+            max-width: 500px;
+            background-color: black;
+            margin-left: 15px;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgb(57,255,20);
+        }
+        .containerltext {
+            max-width: 800px;
+            background-color: black;
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgb(57,255,20);
+        }
+
+        header {
+            background-color: #000;
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+            border-bottom: 3px solid #39FF14;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 38px;
+            color: #39FF14;
+            overflow: hidden;
+            letter-spacing: 4px;
+        }
+
+        header h1 span {
+            opacity: 0;
+            display: inline-block;
+            transform: translateY(-20px);
+            animation: fadeInUp 0.6s forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        header p {
+            margin-top: 10px;
+            font-size: 18px;
+            color: #d1d5db;
+            opacity: 0;
+            transform: translateY(-10px);
+            animation: fadeInP 1s forwards;
+            animation-delay: 1.2s;
+        }
+
+        @keyframes fadeInP {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            background-color: #111;
+            z-index: 100;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 15px 25px;
+            display: block;
+            font-size: 16px;
+            position: relative;
+            transition: transform 0.2s ease;
+        }
+
+        nav a::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: 6px;
+            width: 0;
+            height: 2px;
+            background: #39FF14;
+            transition: 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        nav a:hover::after {
+            width: 60%;
+        }
+
+        nav a:hover {
+            transform: scale(1.05);
+        }
+
+        .section {
+            background-color: #000;
+            color: #fff;
+            padding: 60px 20px;
+            margin: 30px 0;
+            border-left: 5px solid #39FF14;
+            opacity: 0;
+            transform: scale(0.98);
+            transition: transform 0.6s ease, opacity 0.6s ease;
+        }
+
+        .section-left {
+            transform: translateX(-50px) scale(0.98);
+        }
+
+        .section-right {
+            transform: translateX(50px) scale(0.98);
+        }
+
+        .section.visible {
+            opacity: 1;
+            transform: translateX(0) scale(1);
+        }
+
+        .section:hover {
+            box-shadow: 0 20px 40px rgb(57,255,20);
+            transform: translateY(-5px) scale(1.01);
+        }
+
+        .section h2 {
+            text-align: center;
+            font-size: 28px;
+            margin-top: 0;
+            color: #39FF14;
+        }
+
+        .section p {
+            text-align: center;
+            font-size: 16px;
+            max-width: 700px;
+            margin: 10px auto;
+        }
+
+        .contact {
+            background-color: #111;
+            color: #fff;
+            padding: 40px 20px;
+            margin-top: 60px;
+            border-top: 3px solid #39FF14;
+        }
+
+        .contact-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact h2 {
+            margin-top: 0;
+            font-size: 26px;
+            color: #39FF14;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1 id="header-text">LGS_tufCookies</h1>
+    <p>Innovation Project</p>
+</header>
+
+<nav>
+    <a href="#about">About</a>
+    <a href="#voice">Phase 1</a>
+    <a href="#mental">Phase 2</a>
+    <a href="#environment">Phase 3</a>
+    <a href="#contact">Phase 4</a>
+    <a href="#hardware">Phase 5</a>
+</nav>
+
+
+</div>
+<div class="container" id="about">
+      <h2>About ArcBot</h2>
+      <p>
+          ArcBot, the AI chatbot capable of predicting and gathering information all with the press of a button. ArcBot has faced various 
+          different modifications and changes which have improved its usability, capability and transferability, for one purpose, to change 
+          the archaeology industry and take efficiency to level 10.     
+      </p>
+    </div>
+<div class = "container"> 
+    <img src = "inno_time.jpeg" alt = "timeline_innovation" width = "800px" height = "450px">
+</div>
+<div class="section section-left" id="environment">
+    <h2>Phase 1</h2>
+    <p>
+       This was the beginnning, the idea generation and selection. This phase invloved lots of critical thinking and narrowing down on specific ideas. 
+       We had many different ideas along the way, the most prominent ones being a lidar based drone scanner with a pH level indicator beneath it which 
+       identify and suppress existing dangers. Another idea was a toolkit and boots which archaeologists used to traverse dangerous terrains and excavate
+       safely. Our final idea was the AI based predictor-bot which could take in questions about specific regions or civilisations and predict artifact 
+       locations easily. 
+    </p>
+</div>
+
+<div class="section section-left" id="voice">
+    <h2>Phase 2</h2>
+    <p>
+        The first prototype, the start of it all, ArcBot was created. Equipped wih one basic feature, select an option, 
+        get a different response every time. Although this model was AI based, it still lacked the ability to create answers for any question that was asked, 
+        we began to understand more about it when one of first experts, Mr Bhuvanesh Satyamoorthy, told us that an AI very commonly had a speech feature. This was a pivotal change for our AI as it would lead to one of the biggest advancements we made. 
+    </p>
+</div>
+
+<div class="section section-right" id="mental">
+    <h2>Phase 3</h2>
+    <p>
+        Speech, one of the features every chatbot has. Now, we had it. Completed using OpenAI's Text-to-Speech API and their Whisper API,
+        we fully achieved speech automation in the AI tool. We could start speaking and have the text come out onto the terminal and when 
+        the answer came out, a audio file auto played and could be saved at any time. This was what we thought was the peak of the AI. But
+        now, it was time for a greater change...
+    </p>
+</div>
+
+<div class="section section-left" id="environment">
+    <h2>Phase 4</h2>
+    <p>
+       A completed Web User Interface, a staple of any major program, specifically AI ones. The idea came to us when our team were brainstorming ideas 
+       which could take the Chatbot to another level. Various ideas were thought about, but this was one which we knew would be the idea to change our 
+       program. 
+    </p>
+</div>
+<div class="section section-left" id="hardware">
+    <h2>Phase 5</h2>
+    <p>
+       Good User Interface, Good Voice Recognition, Good knowledge. What more would you want a Chatbot to have? What about a handheld device, same capabilities, same level of detail, but in a smaller, more compact and easier to use device. This was where we really understood how this project would greatly influence the lives of working archaeologists.
+    </p>
+</div>
+<div class="container">
+      <h2>Consultants</h2>
+      <p>
+         Over the course of the previous couple of months, we have spoken to many experts regarding our Innovation project...     
+      </p>
+    </div>
+
+<div>
+    <table>
+        <tr>
+            <td class = "containerlimage">
+                <img src = "consultant1.jpeg.png" alt = "mark">
+            </td>
+            <td class = "containerrtext">
+                <p>
+                    Professor Mark Altaweel was the first consultant that we spoke to, and he 
+                    greatly shifted our perspective pf what our chatbot was doing. We thought that our Chatbot would be a research tool for archaeologists, 
+                    but he explained that it was more of a predictor-bot.
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td class = "containerltext">
+                <p>
+                    Dr Lucy J Koster is a profesoswidc jirwbufbwefbweofneofqwoff wfuoqwhfoqw fuebfegfuefw efuwefew fuiwefe fwyei fewf we fewif ewif ewfiwe fweyif iwefewfefjweobfew fuebewbwebgueguoewbfueobfewfouwebfuefuewvfwuobfouwefbewguwewvgowu4g
+                </p>
+            </td>
+            <td class = "conatinerrimage">
+                <img src = "consultant2.jpeg.png" alt = "Lucy">
+            </td>
+        </tr>
+    </table>
+</div>
+
+<div class="contact" id="contact">
+    <div class="contact-content">
+        <h2>Communication</h2>
+        <p>
+            Email: LGS_tufCookies@gmail.com
+        </p>
+        <p> Youtube Channel :<a href = "https://www.youtube.com/@LGS_tufcookies" class = "link">LGS_tufcookies</a></p>
+    </div>
+</div>
+
+<script>
+    const header = document.getElementById('header-text');
+    const words = header.innerText.split(' ');
+    header.innerText = '';
+    words.forEach((word, i) => {
+        const span = document.createElement('span');
+        span.innerText = word + ' ';
+        span.style.animationDelay = `${i * 0.15}s`;
+        header.appendChild(span);
+    });
+
+    const sections = document.querySelectorAll('.section');
+
+    function checkSections() {
+        const triggerBottom = window.innerHeight * 0.8;
+        sections.forEach((section, index) => {
+            const sectionTop = section.getBoundingClientRect().top;
+            if (sectionTop < triggerBottom && sectionTop + section.offsetHeight > 0) {
+                section.style.transitionDelay = `${index * 0.15}s`;
+                section.classList.add('visible');
+            } else {
+                section.classList.remove('visible');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', checkSections);
+    window.addEventListener('load', checkSections);
+</script>
+
+</body>
+</html>
