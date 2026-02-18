@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>LGS_tufCookies</title>
+    <link rel = "icon" href = "icon no background.png">
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #0B0B0B;
+            color: white;
+        }
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            background-color: black;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow:0px 4px 10px rgb(57,255,20);
+        }
+        .container h2 {
+            text-align: center;
+            color: #39FF14;
+        }
+
+        .container p {
+            color: white;
+            text-align: center;
+        }
+        .container img {
+            align-items: center;
+        }
+        header {
+            background-color: #000;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            border-bottom: 3px solid #39FF14;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 38px;
+            color: #39FF14;
+            overflow: hidden;
+            letter-spacing: 4px;
+        }
+
+        header h1 span {
+            opacity: 0;
+            display: inline-block;
+            transform: translateY(-20px);
+            animation: fadeInUp 0.6s forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        header p {
+            margin-top: 10px;
+            font-size: 18px;
+            color: #d1d5db;
+            opacity: 0;
+            transform: translateY(-10px);
+            animation: fadeInP 1s forwards;
+            animation-delay: 1.2s;
+        }
+
+        @keyframes fadeInP {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            background-color: #111;
+            z-index: 100;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 15px 25px;
+            display: block;
+            font-size: 16px;
+            position: relative;
+            transition: transform 0.2s ease;
+        }
+
+        nav a::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: 6px;
+            width: 0;
+            height: 2px;
+            background: #39FF14;
+            transition: 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        nav a:hover::after {
+            width: 60%;
+        }
+
+        nav a:hover {
+            transform: scale(1.05);
+        }
+
+        .section {
+            background-color: #000;
+            color: #fff;
+            padding: 60px 20px;
+            margin: 30px 0;
+            border-left: 5px solid #39FF14;
+            opacity: 0;
+            transform: scale(0.98);
+            transition: transform 0.6s ease, opacity 0.6s ease;
+        }
+
+        .section-left {
+            transform: translateX(-50px) scale(0.98);
+        }
+
+        .section-right {
+            transform: translateX(50px) scale(0.98);
+        }
+
+        .section.visible {
+            opacity: 1;
+            transform: translateX(0) scale(1);
+        }
+
+        .section:hover {
+            box-shadow: 0 20px 40px rgba(57, 255, 20, 0.15);
+            transform: translateY(-5px) scale(1.01);
+        }
+
+        .section h2 {
+            text-align: center;
+            font-size: 28px;
+            margin-top: 0;
+            color: #39FF14;
+        }
+
+        .section p {
+            text-align: center;
+            font-size: 16px;
+            max-width: 700px;
+            margin: 10px auto;
+        }
+
+        .contact {
+            background-color: #111;
+            color: #fff;
+            padding: 40px 20px;
+            margin-top: 60px;
+            border-top: 3px solid #39FF14;
+        }
+
+        .contact-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact h2 {
+            margin-top: 0;
+            font-size: 26px;
+            color: #39FF14;
+        }
+        .link {
+            color: #39FF14;
+        }
+        .logo {
+            width: 120px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<header>
+    <img src="icon no background.png" alt="LGS_tufCookies Logo" class="logo">
+    <h1 id="header-text">LGS_tufCookies</h1>
+    <p>An Lgs Robotics Team </p>
+</header>
+
+<nav>
+    <a href="#about">About The Robot</a>
+    <a href="#about">Phase 1</a>
+    <a href="#voice">Phase 2</a>
+    <a href="#environment">Phase 3</a>
+    <a href="#contact">Phase 4</a>
+    <a href="#testing">Testing</a>
+</nav>
+
+
+</div>
+<div class="container" id="about">
+      <h2>About THE COOKIE MONSTER</h2>
+      <p>
+          The Cookie Monster, the one and only successor to our first ever robot, 
+          (dummybot as some like to call it!) is fully equipped with 4 motorised 
+          attachment outputs as well as space on any side of the robot for passive 
+          attachment outputs. It has a gyrosensor, two medium motors and two large
+          motors. We used the blue lego spike wheels (8.8cm) on our ev3 mindstorms 
+          robot!    
+      </p>
+    </div>
+<div class="section section-left" id="environment">
+    <h2>Phase 1 - Prior to Regionals</h2>
+    <p>
+        Our first season, first robot, no big expectations. This robot did what we 
+        needed it to do, when we needed it done. Getting through to Nationals,
+        couldn't be done without it. In our three runs, first went good, getting
+        us 190 points. In our second run, all our missions went wrong, 130 points
+        only, this wouldn't be enough. We were nervous, but in our final run, the
+        robot pullled through and got 40 more points in the last 5 seconds,
+        getting us 205 points as our best score. However, as we let our victory phase go by,
+        we realised, we needed more to be able to compete with teams with over
+        four years of experience. Hence, we had to start from scratch and rebuild. 
+    </p>
+</div>
+
+<div class="section section-left" id="voice">
+    <h2>Phase 2 - Start from Scratch</h2>
+    <p>
+        As a first season team, it's hard to know what's right. Making this decision
+        is a big risk, but it can go very well for our team. On limited time, we have
+        completed building the robot and are now moving on to coding. It is a lot easier,
+        the robot is more compact and much more versatile. This can lead to something big...
+    </p>
+</div>
+
+<div class="section section-right" id="mental">
+    <h2>Phase 3 - Attachments and coding</h2>
+    <p>
+        As we have four different motorised outputs, as well as ample space for passive attachments,
+        we are able to complete many different missions in a single launch of the robot. We decided
+        to build the robot around this multi mission strategy and so we decided to group specific 
+        missions together which would be completed in a single launch.
+    </p>
+</div>
+
+<div class="section section-left" id="environment">
+    <h2>Phase 4 - Runs and testing</h2>
+    <p>
+       --------
+    </p>
+</div>
+
+<div class = "container" id = "testing">
+    <h2>
+        Testing
+    </h2>
+    <p>
+dddddddddddddd
+    </p>
+</div>
+<div class="contact" id="contact">
+    <div class="contact-content">
+        <h2>Communication</h2>
+        <p>
+            Email: LGS_tufCookies@gmail.com
+        </p>
+        <p> Youtube Channel : <a href = "https://www.youtube.com/@LGS_tufcookies" class = "link">LGS_tufcookies</a> </p>
+    </div>
+</div>
+
+<script>
+    const header = document.getElementById('header-text');
+    const words = header.innerText.split(' ');
+    header.innerText = '';
+    words.forEach((word, i) => {
+        const span = document.createElement('span');
+        span.innerText = word + ' ';
+        span.style.animationDelay = `${i * 0.15}s`;
+        header.appendChild(span);
+    });
+
+    const sections = document.querySelectorAll('.section');
+
+    function checkSections() {
+        const triggerBottom = window.innerHeight * 0.8;
+        sections.forEach((section, index) => {
+            const sectionTop = section.getBoundingClientRect().top;
+            if (sectionTop < triggerBottom && sectionTop + section.offsetHeight > 0) {
+                section.style.transitionDelay = `${index * 0.15}s`;
+                section.classList.add('visible');
+            } else {
+                section.classList.remove('visible');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', checkSections);
+    window.addEventListener('load', checkSections);
+</script>
+
+</body>
+</html>
